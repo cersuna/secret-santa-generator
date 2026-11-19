@@ -1,0 +1,9 @@
+{
+  "name": "drawsanta",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "serve": "npx --yes serve@14.2.4 docs -l 4321"
+  }
+}

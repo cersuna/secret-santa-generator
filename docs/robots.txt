@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /secret-santa-generator/reveal/
+Sitemap: https://cersuna.github.io/secret-santa-generator/sitemap.xml

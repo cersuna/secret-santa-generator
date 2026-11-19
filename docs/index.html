@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Secret Santa Generator: Draw Names Online, No Sign-Up (2026)</title>
+<meta name="description" content="Draw names for Secret Santa in seconds. Free, no emails or sign-up needed. Add exclusions, a budget and wishlists, then send everyone a private reveal link by text, WhatsApp or email.">
+<link rel="canonical" href="https://cersuna.github.io/secret-santa-generator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DrawSanta">
+<meta property="og:title" content="Free Secret Santa Generator: Draw Names Online, No Sign-Up (2026)">
+<meta property="og:description" content="Draw names for Secret Santa in seconds. Free, no emails or sign-up needed. Add exclusions, a budget and wishlists, then send everyone a private reveal link by text, WhatsApp or email.">
+<meta property="og:url" content="https://cersuna.github.io/secret-santa-generator/">
+<meta property="og:image" content="https://cersuna.github.io/secret-santa-generator/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14532d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23c8102e%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-size%3D%2238%22%20text-anchor%3D%22middle%22%3E%F0%9F%8E%81%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="/secret-santa-generator/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this Secret Santa generator really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. DrawSanta is 100% free with no sign-up, no email addresses and no limit on how many people you add. Optional gift-idea links earn us a small affiliate commission at no cost to you."}},{"@type":"Question","name":"How does everyone find out who they got?","acceptedAnswer":{"@type":"Answer","text":"After the draw, every participant gets their own private link. Send each person their link by text, WhatsApp, email or Slack. When they open it, they unwrap a gift box that shows who they're buying for, along with that person's wishlist and the budget."}},{"@type":"Question","name":"Will the organizer see who got who?","acceptedAnswer":{"@type":"Answer","text":"No. The organizer only sees a list of names with a link next to each one, never the matches. That means the organizer can join in too. (Just don't open other people's links!)"}},{"@type":"Question","name":"Can I stop couples or family members from drawing each other?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use Exclusions to stop specific people from drawing each other, either one-way or both ways. The generator also avoids two people drawing each other by default."}},{"@type":"Question","name":"Do you store our names?","acceptedAnswer":{"@type":"Answer","text":"No. The draw runs entirely in your browser. Names live only in your browser and inside each private link. Nothing is uploaded to a server and no database exists."}},{"@type":"Question","name":"What if someone loses their link?","acceptedAnswer":{"@type":"Answer","text":"The organizer's browser remembers the draw, so reopen this page on the same device and the links will still be there to copy again."}},{"@type":"Question","name":"Can I use it for an office or virtual Secret Santa?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Because links can go through any messenger, DrawSanta works for office parties, remote teams, families spread across the country, classrooms and friend groups."}},{"@type":"Question","name":"How many people can join?","acceptedAnswer":{"@type":"Answer","text":"There's no hard limit. Groups of 3 to 100+ work fine."}}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"DrawSanta Secret Santa Generator","url":"https://cersuna.github.io/secret-santa-generator/","applicationCategory":"LifestyleApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="/secret-santa-generator/"><span>🎁</span>DrawSanta</a>
+<nav class="top"><a href="/secret-santa-generator/">Generator</a><a href="/secret-santa-generator/secret-santa-gift-ideas/">Gift ideas</a><a href="/secret-santa-generator/secret-santa-rules/">Rules</a><a href="/secret-santa-generator/secret-santa-questionnaire/">Questionnaire</a></nav>
+</div></header>
+<main class="wrap">
+
+<section class="hero">
+  <h1>Free Secret Santa Generator</h1>
+  <p>Draw names in 30 seconds. No sign-up, no emails. Everyone gets a private link that reveals who they're buying for.</p>
+  <div class="badges"><span class="badge">✓ No account</span><span class="badge">✓ Exclusions</span><span class="badge">✓ Wishlists</span><span class="badge">✓ Text / WhatsApp / Email</span></div>
+</section>
+
+<div class="card" id="tool">
+  <h2>1. Who's taking part? <span class="muted small" id="count"></span></h2>
+  <div id="people"></div>
+  <p><button type="button" class="btn small" id="addPerson">+ Add person</button> <button type="button" class="btn small ghost" id="bulkBtn">Paste a list</button></p>
+
+  <h2 style="margin-top:24px">2. Exchange details <span class="muted small">(optional)</span></h2>
+  <div class="grid">
+    <div><label for="evName">Event name</label><input id="evName" placeholder="Smith Family Christmas" maxlength="60"></div>
+    <div><label for="budget">Budget</label><div class="row" style="margin:0"><select id="currency" style="width:80px" aria-label="Currency"><option>$</option><option>£</option><option>€</option><option>C$</option><option>A$</option><option>₹</option></select><input id="budget" inputmode="decimal" placeholder="25" maxlength="8"></div></div>
+    <div><label for="evDate">Exchange date</label><input id="evDate" type="date"></div>
+  </div>
+  <div style="margin-top:12px"><label for="note">Message to everyone</label><input id="note" placeholder="Bring gifts wrapped to the party at 7pm!" maxlength="160"></div>
+
+  <h2 style="margin-top:24px">3. Exclusions <span class="muted small">(optional)</span></h2>
+  <p class="muted small" style="margin-top:-8px">Stop couples, roommates or last year's pairs from drawing each other.</p>
+  <div class="row"><select id="exA" aria-label="Person"></select><span>can't draw</span><select id="exB" aria-label="Excluded person"></select></div>
+  <div class="row"><label class="check"><input type="checkbox" id="exBoth" checked> Both ways</label><button type="button" class="btn small" id="exAdd">Add rule</button></div>
+  <div class="chips" id="exList"></div>
+  <p><label class="check"><input type="checkbox" id="noPairs" checked> Don't let two people draw each other</label></p>
+
+  <p class="center" style="margin-top:20px"><button type="button" class="btn primary" id="drawBtn">🎲 Draw names</button></p>
+  <div class="err" id="err" role="alert"></div>
+</div>
+
+<div class="card hidden results" id="results">
+  <h2>🎉 Names drawn! Send each person their private link</h2>
+  <p class="muted small">You can't see who got who, so you can join in too. Only open your <b>own</b> link.</p>
+  <ul id="resList"></ul>
+  <p style="margin-top:16px"><button class="btn small" id="copyAll">Copy all links</button> <button class="btn small ghost" id="resetBtn">Start a new exchange</button></p>
+</div>
+
+
+
+<article>
+<h2>How to draw names for Secret Santa online</h2>
+<ol>
+<li><b>Add everyone's names.</b> Type them in, or paste a whole list from a group chat. You can add a wishlist or hints for each person.</li>
+<li><b>Set the budget and date.</b> These appear on every reveal so nobody forgets the spending limit.</li>
+<li><b>Add exclusions</b> so partners or housemates can't draw each other.</li>
+<li><b>Click "Draw names"</b>, then send each person their private link by text, WhatsApp, email, Slack or Teams.</li>
+<li>Each person <b>taps the gift box</b> to unwrap their match and gets gift ideas that fit the budget.</li>
+</ol>
+
+<h2>Why use DrawSanta instead of drawing from a hat?</h2>
+<p>Pulling names from a hat only works if everyone is in the same room, and someone always draws their own name. An online Secret Santa generator fixes both problems. The draw is random, nobody gets themselves, and it works for families, offices and friends spread across different cities. Unlike most Secret Santa sites, DrawSanta doesn't make you create an account or collect everyone's email address. The links do the work.</p>
+
+<h2>Popular Secret Santa budgets</h2>
+<p>Most groups pick one of these limits. Click one for gift ideas that fit it:</p>
+<ul>
+<li><a href="/secret-santa-generator/secret-santa-gift-ideas-under-10/">Secret Santa gifts under $10</a>: classrooms, big offices</li>
+<li><a href="/secret-santa-generator/secret-santa-gift-ideas-under-20/">Secret Santa gifts under $20</a>: the most popular office budget</li>
+<li><a href="/secret-santa-generator/secret-santa-gift-ideas-under-25/">Secret Santa gifts under $25</a>: friend groups</li>
+<li><a href="/secret-santa-generator/secret-santa-gift-ideas-under-50/">Secret Santa gifts under $50</a>: families and close friends</li>
+</ul>
+<p>New to it? Read the <a href="/secret-santa-generator/secret-santa-rules/">Secret Santa rules</a>, print a <a href="/secret-santa-generator/secret-santa-questionnaire/">Secret Santa questionnaire</a>, or see how to run an <a href="/secret-santa-generator/office-secret-santa/">office Secret Santa</a> or a <a href="/secret-santa-generator/virtual-secret-santa/">virtual Secret Santa</a>.</p>
+
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>Is this Secret Santa generator really free?</summary><p>Yes. DrawSanta is 100% free with no sign-up, no email addresses and no limit on how many people you add. Optional gift-idea links earn us a small affiliate commission at no cost to you.</p></details><details><summary>How does everyone find out who they got?</summary><p>After the draw, every participant gets their own private link. Send each person their link by text, WhatsApp, email or Slack. When they open it, they unwrap a gift box that shows who they're buying for, along with that person's wishlist and the budget.</p></details><details><summary>Will the organizer see who got who?</summary><p>No. The organizer only sees a list of names with a link next to each one, never the matches. That means the organizer can join in too. (Just don't open other people's links!)</p></details><details><summary>Can I stop couples or family members from drawing each other?</summary><p>Yes. Use <b>Exclusions</b> to stop specific people from drawing each other, either one-way or both ways. The generator also avoids two people drawing each other by default.</p></details><details><summary>Do you store our names?</summary><p>No. The draw runs entirely in your browser. Names live only in your browser and inside each private link. Nothing is uploaded to a server and no database exists.</p></details><details><summary>What if someone loses their link?</summary><p>The organizer's browser remembers the draw, so reopen this page on the same device and the links will still be there to copy again.</p></details><details><summary>Can I use it for an office or virtual Secret Santa?</summary><p>Absolutely. Because links can go through any messenger, DrawSanta works for office parties, remote teams, families spread across the country, classrooms and friend groups.</p></details><details><summary>How many people can join?</summary><p>There's no hard limit. Groups of 3 to 100+ work fine.</p></details></section>
+</article>
+</main>
+<footer class="site"><div class="wrap">
+<p><a href="/secret-santa-generator/">Secret Santa Generator</a><a href="/secret-santa-generator/office-secret-santa/">Office Secret Santa</a><a href="/secret-santa-generator/virtual-secret-santa/">Virtual Secret Santa</a><a href="/secret-santa-generator/white-elephant-rules/">White Elephant Rules</a><a href="/secret-santa-generator/secret-santa-gift-ideas/">Gift Ideas</a><a href="/secret-santa-generator/privacy/">Privacy</a></p>
+<p class="disclosure">As an Amazon Associate DrawSanta earns from qualifying purchases. That's how this tool stays free. © 2026 DrawSanta.</p>
+</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>window.DS={base:"/secret-santa-generator",tag:"",amz:function(q){return "https://www.amazon.com/s?k="+encodeURIComponent(q)+(this.tag?"&tag="+encodeURIComponent(this.tag):"")}};</script>
+<script src="/secret-santa-generator/codec.js"></script>
+<script src="/secret-santa-generator/app.js"></script>
+</body>
+</html>
